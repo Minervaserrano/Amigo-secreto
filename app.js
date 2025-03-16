@@ -16,23 +16,22 @@ function agregarAmigo () {
     }
 }  
     function mostrarAmigos(){
-        nombre.forEach(function(amigo){
-
+        for (let i = 0; i <nombre.length; i++){
             let li = document.createElement('li');
-            li.textContent = amigo;
-        
+            li.textContent = nombre[i];
             document.getElementById('listaAmigos').appendChild(li);
-        });
+        }
+  
+        }
      
-    }
-
 function sortearAmigo (){
-    if (nombre.length > 0) {
+    document.getElementById('listaAmigos').innerHTML = "";
+        if (nombre.length > 0) {
         
         let indiceAleatorio = Math.floor(Math.random() * nombre.length);
         let amigoSeleccionado = nombre[indiceAleatorio];
         document.getElementById('resultado').textContent = 'Amigo aleatorio seleccionado: ' + amigoSeleccionado;
-
-    
+   
     } 
-}
+
+}  
